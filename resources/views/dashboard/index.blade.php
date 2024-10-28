@@ -6,8 +6,6 @@
 @section('page_heading','')
     
 @section('content')
-<div class="container">
-  <div class="row justify-content-center">
       <!-- Main content -->
       <section class="content">
           <div class="container-fluid">
@@ -66,221 +64,66 @@
               <!-- ./col -->
           </div>
           <!-- /.row -->
-          <!-- Main row -->
-          <div class="row">
-              <!-- Left col -->
-                  {{-- TODO: users table --}}
-                      <div class="col-md-12">
-                          <div class="card">
-                          <div class="card-header">
-                              <h3 class="card-title">Users Table</h3>
-                          </div>
-                          <!-- /.card-header -->
-                          <div class="card-body">
-                              <table class="table table-bordered">
-                              <thead>
-                                  <tr>
-                                  <th style="width: 10px">#</th>
-                                  <th>Task</th>
-                                  <th>Progress</th>
-                                  <th style="width: 40px">Label</th>
-                                  </tr>
-                              </thead>
-                              <tbody>
-                                  <tr>
-                                  <td>1.</td>
-                                  <td>Update software</td>
-                                  <td>
-                                      <div class="progress progress-xs">
-                                      <div class="progress-bar progress-bar-danger" style="width: 55%"></div>
-                                      </div>
-                                  </td>
-                                  <td><span class="badge bg-danger">55%</span></td>
-                                  </tr>
-                                  <tr>
-                                  <td>2.</td>
-                                  <td>Clean database</td>
-                                  <td>
-                                      <div class="progress progress-xs">
-                                      <div class="progress-bar bg-warning" style="width: 70%"></div>
-                                      </div>
-                                  </td>
-                                  <td><span class="badge bg-warning">70%</span></td>
-                                  </tr>
-                                  <tr>
-                                  <td>3.</td>
-                                  <td>Cron job running</td>
-                                  <td>
-                                      <div class="progress progress-xs progress-striped active">
-                                      <div class="progress-bar bg-primary" style="width: 30%"></div>
-                                      </div>
-                                  </td>
-                                  <td><span class="badge bg-primary">30%</span></td>
-                                  </tr>
-                                  <tr>
-                                  <td>4.</td>
-                                  <td>Fix and squish bugs</td>
-                                  <td>
-                                      <div class="progress progress-xs progress-striped active">
-                                      <div class="progress-bar bg-success" style="width: 90%"></div>
-                                      </div>
-                                  </td>
-                                  <td><span class="badge bg-success">90%</span></td>
-                                  </tr>
-                              </tbody>
-                              </table>
-                          </div>
-                          <!-- /.card-body -->
-                          <div class="card-footer clearfix">
-                              <ul class="pagination pagination-sm m-0 float-right">
-                              <li class="page-item"><a class="page-link" href="#">&laquo;</a></li>
-                              <li class="page-item"><a class="page-link" href="#">1</a></li>
-                              <li class="page-item"><a class="page-link" href="#">2</a></li>
-                              <li class="page-item"><a class="page-link" href="#">3</a></li>
-                              <li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
-                              </ul>
-                          </div>
-                          </div>
-                      </div>
-              <!-- /.card -->
-  
-              {{-- TODO: available schedule --}}
-              <div class="col-md-12">
-                  <div class="card">
-                  <div class="card-header">
-                      <h3 class="card-title">Schedule available Table</h3>
-                  </div>
-                  <!-- /.card-header -->
-                  <div class="card-body">
-                      <table class="table table-bordered">
-                      <thead>
-                          <tr>
-                          <th style="width: 10px">#</th>
-                          <th>Task</th>
-                          <th>Progress</th>
-                          <th style="width: 40px">Label</th>
-                          </tr>
-                      </thead>
-                      <tbody>
-                          <tr>
-                          <td>1.</td>
-                          <td>Update software</td>
-                          <td>
-                              <div class="progress progress-xs">
-                              <div class="progress-bar progress-bar-danger" style="width: 55%"></div>
-                              </div>
-                          </td>
-                          <td><span class="badge bg-danger">55%</span></td>
-                          </tr>
-                          <tr>
-                          <td>2.</td>
-                          <td>Clean database</td>
-                          <td>
-                              <div class="progress progress-xs">
-                              <div class="progress-bar bg-warning" style="width: 70%"></div>
-                              </div>
-                          </td>
-                          <td><span class="badge bg-warning">70%</span></td>
-                          </tr>
-                          <tr>
-                          <td>3.</td>
-                          <td>Cron job running</td>
-                          <td>
-                              <div class="progress progress-xs progress-striped active">
-                              <div class="progress-bar bg-primary" style="width: 30%"></div>
-                              </div>
-                          </td>
-                          <td><span class="badge bg-primary">30%</span></td>
-                          </tr>
-                          <tr>
-                          <td>4.</td>
-                          <td>Fix and squish bugs</td>
-                          <td>
-                              <div class="progress progress-xs progress-striped active">
-                              <div class="progress-bar bg-success" style="width: 90%"></div>
-                              </div>
-                          </td>
-                          <td><span class="badge bg-success">90%</span></td>
-                          </tr>
-                      </tbody>
-                      </table>
-                  </div>
-                  <!-- /.card-body -->
-                  <div class="card-footer clearfix">
-                      <ul class="pagination pagination-sm m-0 float-right">
-                      <li class="page-item"><a class="page-link" href="#">&laquo;</a></li>
-                      <li class="page-item"><a class="page-link" href="#">1</a></li>
-                      <li class="page-item"><a class="page-link" href="#">2</a></li>
-                      <li class="page-item"><a class="page-link" href="#">3</a></li>
-                      <li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
-                      </ul>
-                  </div>
-                  </div>
-              </div>
-              <!--/.direct-chat -->
-  {{-- Setup data for datatables --}}
-
+          
+          </div>
+          {{-- Setup data for datatables --}}
 @php
 $heads = [
-    'ID',
-    'Name',
-    ['label' => 'Phone', 'width' => 40],
+    'Shift Title',
+    'Time From',
+    'Time To',
+    'Minutes',
     ['label' => 'Actions', 'no-export' => true, 'width' => 5],
 ];
 
-$btnEdit = '<button class="btn btn-xs btn-default text-primary mx-1 shadow" title="Edit">
-                <i class="fa fa-lg fa-fw fa-pen"></i>
-            </button>';
-$btnDelete = '<button class="btn btn-xs btn-default text-danger mx-1 shadow" title="Delete">
-                  <i class="fa fa-lg fa-fw fa-trash"></i>
-              </button>';
-$btnDetails = '<button class="btn btn-xs btn-default text-teal mx-1 shadow" title="Details">
-                   <i class="fa fa-lg fa-fw fa-eye"></i>
-               </button>';
+//populate data in array
+if(count($schedulesettings)>0){
+    foreach ($schedulesettings as $key => $value) {
+        $schedulesettings_data[]= array( //undefined variable
+            $value['ss_shift_title'],
+            $value['ss_time_from'],
+            $value['ss_time_to'],
+            $value['ss_minutes'],
+            
+            $btnEdit = '<span class="btn-group"><a href="'.route('schedulesettings.edit', $value['id']).'" class="btn btn-success"><i class="fa fa-lg fa-fw fa-pen"></i></a>
+            <span class="btn-group">'.
+            $btnDelete = '<a href="'.route('schedulesettings.destroy', $value['id']).'" class="btn btn-danger"><i class="fa fa-lg fa-fw fa-trash"></i></a></span>',
+            // $btnDetails = '<button class="btn btn-xs btn-default text-teal mx-1 shadow" title="Details">
+            //                 <i class="fa fa-lg fa-fw fa-eye"></i>
+            //             </button> ',
+        );
+        
+        // echo $employee_name;
+    };
 
-$config = [
-    'data' => [
-        [22, 'John Bender', '+02 (123) 123456789', '<nobr>'.$btnEdit.$btnDelete.$btnDetails.'</nobr>'],
-        [19, 'Sophia Clemens', '+99 (987) 987654321', '<nobr>'.$btnEdit.$btnDelete.$btnDetails.'</nobr>'],
-        [3, 'Peter Sousa', '+69 (555) 12367345243', '<nobr>'.$btnEdit.$btnDelete.$btnDetails.'</nobr>'],
-        [3, 'Peter Sousa', '+69 (555) 12367345243', '<nobr>'.$btnEdit.$btnDelete.$btnDetails.'</nobr>'],
-        [3, 'Peter Sousa', '+69 (555) 12367345243', '<nobr>'.$btnEdit.$btnDelete.$btnDetails.'</nobr>'],
-        [3, 'Peter Sousa', '+69 (555) 12367345243', '<nobr>'.$btnEdit.$btnDelete.$btnDetails.'</nobr>'],
-        [3, 'Peter Sousa', '+69 (555) 12367345243', '<nobr>'.$btnEdit.$btnDelete.$btnDetails.'</nobr>'],
-        [3, 'Peter Sousa', '+69 (555) 12367345243', '<nobr>'.$btnEdit.$btnDelete.$btnDetails.'</nobr>'],
-        [3, 'Peter Sousa', '+69 (555) 12367345243', '<nobr>'.$btnEdit.$btnDelete.$btnDetails.'</nobr>'],
-        [3, 'Peter Sousa', '+69 (555) 12367345243', '<nobr>'.$btnEdit.$btnDelete.$btnDetails.'</nobr>'],
-        [3, 'Peter Sousa', '+69 (555) 12367345243', '<nobr>'.$btnEdit.$btnDelete.$btnDetails.'</nobr>'],
-        [3, 'Peter Sousa', '+69 (555) 12367345243', '<nobr>'.$btnEdit.$btnDelete.$btnDetails.'</nobr>'],
-        [3, 'Peter Sousa', '+69 (555) 12367345243', '<nobr>'.$btnEdit.$btnDelete.$btnDetails.'</nobr>'],
-        [3, 'Peter Sousa', '+69 (555) 12367345243', '<nobr>'.$btnEdit.$btnDelete.$btnDetails.'</nobr>'],
-        [3, 'Peter Sousa', '+69 (555) 12367345243', '<nobr>'.$btnEdit.$btnDelete.$btnDetails.'</nobr>'],
-    ],
-    'order' => [[1, 'asc']],
-    'columns' => [null, null, null, ['orderable' => false]],
-];
+    $config = [
+        'data' =>  $schedulesettings_data,
+        'order' => [[1, 'asc']],
+        'columns' => [null, null, null, ['orderable' => false]],
+    ];
+
+};
+// dd($config);
+
 @endphp
 
 {{-- Minimal example / fill data using the component slot --}}
-<x-adminlte-datatable id="table8" :heads="$heads" head-theme="dark" class="bg-teal" :config="$config"
-    striped hoverable with-buttons>
-    @foreach($config['data'] as $row)
-        <tr>
-            @foreach($row as $cell)
-                <td>{!! $cell !!}</td>
-            @endforeach
-        </tr>
-    @endforeach
+<x-adminlte-datatable id="table8" :heads="$heads" head-theme="dark" class="bg-gray" 
+    striped hoverable with-buttons >
+    @if(count($schedulesettings)>0)
+        @foreach($config['data'] as $row)
+            <tr>
+                @foreach($row as $cell)
+                    <td>{!! $cell !!}</td>
+                @endforeach
+            </tr>
+        @endforeach
+    @endif
 </x-adminlte-datatable>
-              <!-- /.Left col -->
-         
-          </div>
-          <!-- /.row (main row) -->
-          </div><!-- /.container-fluid -->
+
+    
       </section>
        <!-- /.content -->
   
-  </div>
-</div>
 
 @endsection

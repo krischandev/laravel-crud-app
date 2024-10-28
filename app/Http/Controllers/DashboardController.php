@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\Dashboard;
+use App\Models\ScheduleSettings;
 use Illuminate\Http\Request;
 
 class DashboardController extends Controller
@@ -24,8 +25,7 @@ class DashboardController extends Controller
     public function index()
     {
         $dashboard = Dashboard::get();
-        return view('dashboard.index',[
-            'dashboard' => $dashboard
-            ]);
+        $schedulesettings = ScheduleSettings::get();
+        return view('dashboard.index',compact('dashboard','schedulesettings'));
     }
 }

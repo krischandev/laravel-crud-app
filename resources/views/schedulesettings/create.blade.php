@@ -19,7 +19,40 @@
                     <input type="text" class="form-control" name="ss_shift_title" placeholder="Title">
                     @error('ss_shift_title')<span class="text-danger">{{ $message }}</span>@enderror
                 </div>
-                
+                <div class="col-4">
+                        @php
+                        $config = [
+                            'format' => 'HH:mm:ss',
+                            
+                        ];
+                        @endphp
+                        <x-adminlte-input-date name="ss_time_from" label="Schedule Time From" 
+                            :config="$config" placeholder="Time From">
+                            <x-slot name="appendSlot">
+                                <div class="input-group-text bg-dark">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                            </x-slot>
+                        </x-adminlte-input-date>
+                </div>
+                <div class="col-4">
+                    @php
+                    $config = [
+                        'format' => 'HH:mm:ss',
+                        
+                    ];
+                    @endphp
+                    <x-adminlte-input-date name="ss_time_to" label="Schedule Time To" 
+                        :config="$config" placeholder="Time To">
+                        <x-slot name="appendSlot">
+                            <div class="input-group-text bg-dark">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                        </x-slot>
+                    </x-adminlte-input-date>
+
+                    {{-- @dd($finishTime->diff($startTime)->format('%H:%I:%S')); --}}
+            </div>
                 
             </div>
         </div>

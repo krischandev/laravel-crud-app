@@ -21,8 +21,10 @@ class SchedSetReq extends FormRequest
      */
     public function rules(): array
     {
-        return [
-            //
+        return[
+            'ss_shift_title'=> 'required|string|min:3|max:255',
+            // 'ss_time_from'=> 'required|string|min:2|max:255',
+            // 'ss_time_to'=> 'required|string|min:2|max:255',
         ];
     }
 }

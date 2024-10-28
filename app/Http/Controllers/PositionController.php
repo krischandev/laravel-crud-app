@@ -41,8 +41,9 @@ class PositionController extends Controller
 
     public function update(PosReq $request, Position $position)
     {
+// dd($position);
+
         $position->update([
-            'pos_acronym'=> $request->pos_acronym,
             'pos_title'=> $request->pos_title,
             'pos_dept_id'=> $request->pos_dept_id,
         ]);

@@ -22,7 +22,7 @@ class PosReq extends FormRequest
     public function rules(): array
     {
         return[
-            'pos_acronym'=> 'required|string|min:3|max:3',
+            'pos_acronym'=> 'sometimes|required|string|min:3|max:3|unique:employees_position,id,'.$this->id,
             'pos_title'=> 'required|string|min:2|max:255',
             'pos_dept_id'=> 'required',
         ];

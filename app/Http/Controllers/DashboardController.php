@@ -1,7 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
+
+use App\Models\AttendanceSheet;
 use App\Models\Dashboard;
+use App\Models\Employee;
 use App\Models\ScheduleSettings;
 use Illuminate\Http\Request;
 
@@ -24,8 +27,12 @@ class DashboardController extends Controller
      */
     public function index()
     {
+        $checkAbsence = Employee::doesntHave('atdEmphasMany')->get('emp_id');
+
         $dashboard = Dashboard::get();
         $schedulesettings = ScheduleSettings::get();
-        return view('dashboard.index',compact('dashboard','schedulesettings'));
+        $attendancesheet = AttendanceSheet::get();
+        // dd($checkAbsence);
+        return view('dashboard.index',compact('dashboard','schedulesettings','attendancesheet','checkAbsence'));
     }
 }

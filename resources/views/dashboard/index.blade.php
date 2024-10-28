@@ -32,7 +32,7 @@
               <!-- small box -->
                   <div class="small-box bg-success">
                       <div class="inner">
-                      <h3>53</h3>
+                      <h3>{{ $attendancesheet->count() }}</h3>
       
                       <p>Attendance Present</p>
                       </div>
@@ -40,7 +40,7 @@
                         <i class="fas fa-calendar-check"></i>
                       </div>
                       {{-- TODO: Link to Attendance Present List --}}
-                      <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                      <a href="{{ route('attendancesheet.index') }}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                   </div>
               </div>
               <!-- ./col -->
@@ -50,7 +50,7 @@
               <!-- small box -->
                   <div class="small-box bg-danger">
                       <div class="inner">
-                      <h3>65</h3>
+                      <h3>{{ $checkAbsence->count() }}</h3>
       
                       <p>Attendance Absent</p>
                       </div>
@@ -58,7 +58,7 @@
                       <i class="fas fa-calendar-times"></i>
                       </div>
                       {{-- TODO: Link to Attendance Absent List --}}
-                      <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                      <a href="{{ route('attendancesheet.index') }}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                   </div>
               </div>
               <!-- ./col -->

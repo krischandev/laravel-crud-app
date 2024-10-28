@@ -18,7 +18,7 @@
                     <label>Employee</label>
                     <x-adminlte-select name="sp_emp_id">
                         <option class="d-none" value="">Select Employee ...</option>
-                        @foreach($empProfile as $eprof)
+                        @foreach($payrollprofile as $eprof)
                             <option value="{{ $eprof->id }}">{{ $eprof->emp_id }} - {{ $eprof->emp_fn }} {{ $eprof->emp_mn }} {{ $eprof->emp_ln }}</option>
                         @endforeach
                     </x-adminlte-select>

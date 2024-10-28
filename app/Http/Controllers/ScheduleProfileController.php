@@ -33,8 +33,11 @@ class ScheduleProfileController extends Controller
     }
     public function edit($id)
     {
-        $scheduleprofile = ScheduleProfile::find($id);
-        return view('scheduleprofiles.edit',compact('scheduleprofile'));
+        $scheduleprofile = ScheduleProfile::with('schedEmp')->find($id);
+        $employee = Employee::get();
+        $scheduleSettingsAll = ScheduleSettings::get();
+        // dd($employee);
+        return view('scheduleprofile.edit',compact('scheduleprofile','employee','scheduleSettingsAll'));
     }
 
     public function update(SchedProfileSetReq $request, ScheduleProfile $scheduleprofile)

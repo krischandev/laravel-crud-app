@@ -32,7 +32,6 @@
                             <option value="{{ $dept->id }}" @if ($position->pos_dept_id == $dept->id)selected="selected" @endif>{{ $dept->dept_title }}</option>
                         @endforeach
                     </x-adminlte-select>
-                    @error('pos_dept_id')<span class="text-danger">{{ $message }}</span>@enderror
                 </div>
                 
             </div>

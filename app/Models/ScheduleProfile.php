@@ -33,5 +33,10 @@ class ScheduleProfile extends Model
         return $this->hasMany(ScheduleSettings::class,'sp_ss_id');
     }
 
+    public function schedProfileEmp()
+    {
+        return $this->hasMany(Employee::class,'sp_emp_id');
+    }
+
    
 }

@@ -5,12 +5,11 @@ use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\EmployeeDeletedController;
 use App\Http\Controllers\PositionController;
 use App\Http\Controllers\DepartmentController;
+use App\Http\Controllers\TimeCardController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::resource('timecard', TimeCardController::class);
 
 Auth::routes();
 

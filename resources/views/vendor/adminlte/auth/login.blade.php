@@ -101,4 +101,12 @@
             </a>
         </p>
     @endif
+
+
+    <br><br>
+        <p class="my-0">
+            <a href="/timecard">
+                TIME IN AND TIME OUT
+            </a>
+        </p>
 @stop

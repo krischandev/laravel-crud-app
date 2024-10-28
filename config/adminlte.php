@@ -340,7 +340,7 @@ return [
         ],
         [
             'text' => 'Schedule List',
-            'url' => '/schedule-lists',
+            'url' => '/schedulesettings',
             'icon' => 'fas fa-fw fa-book-open',
         ],
         [

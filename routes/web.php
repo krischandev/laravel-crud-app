@@ -5,6 +5,7 @@ use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\EmployeeDeletedController;
 use App\Http\Controllers\PositionController;
 use App\Http\Controllers\DepartmentController;
+use App\Http\Controllers\ScheduleSettingsController;
 use App\Http\Controllers\TimeCardController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
@@ -32,6 +33,9 @@ Route::group(['middleware'=>['auth']], function(){
 
     // Department
     Route::resource('department',DepartmentController::class);
+
+    // Schedule Settings
+    Route::resource('schedulesettings',ScheduleSettingsController::class);
 
     // Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 

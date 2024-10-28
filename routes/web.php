@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AttendanceSheetController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\EmployeeDeletedController;
@@ -7,11 +8,13 @@ use App\Http\Controllers\PositionController;
 use App\Http\Controllers\DepartmentController;
 use App\Http\Controllers\ScheduleProfileController;
 use App\Http\Controllers\ScheduleSettingsController;
-use App\Http\Controllers\TimeCardController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
-Route::resource('timecard', TimeCardController::class);
+// Route::resource('timecard', TimeCardController::class);
+Route::get('/timecard', function () {
+    return view('timecard.index');
+})->name('timecard');
 
 Auth::routes();
 
@@ -40,6 +43,9 @@ Route::group(['middleware'=>['auth']], function(){
 
     // Schedule Profile
     Route::resource('scheduleprofile',ScheduleProfileController::class);
+
+    // Attendance Sheet
+    Route::resource('attendancesheet',AttendanceSheetController::class);
 
     // Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 

@@ -335,7 +335,7 @@ return [
         ['header' => 'MENU LIST'],
         [
             'text' => 'Attendance List',
-            'url' => '/attendance-lists',
+            'url' => '/attendancesheet',
             'icon' => 'fas fa-fw fa-calendar',
         ],
         [

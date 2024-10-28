@@ -31,7 +31,7 @@ if(count($scheduleprofiles)>0){
         $scheduleprofiles_data[]= array( //undefined variable
             $value['schedEmp']['emp_id'],
             $value['schedEmp']['emp_fn']." ".$value['schedEmp']['emp_mn']." ".$value['schedEmp']['emp_ln'],
-            $value['schedSet']['ss_shift_title'],
+            $value['schedSet']['ss_shift_title']."-[ ".$value['schedSet']['ss_time_from']."-".$value['schedSet']['ss_time_to']." ]",
             
             $btnEdit = '<span class="btn-group"><a href="'.route('scheduleprofile.edit', $value['id']).'" class="btn btn-success"><i class="fa fa-lg fa-fw fa-pen"></i></a>
             <span class="btn-group">'.

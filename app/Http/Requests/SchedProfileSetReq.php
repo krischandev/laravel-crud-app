@@ -22,7 +22,7 @@ class SchedProfileSetReq extends FormRequest
     public function rules(): array
     {
         return [
-            'sp_emp_id'=> 'required|unique:employees,id,'.$this->id,
+            'sp_emp_id'=> 'required|unique:schedule_profile,sp_emp_id,'.$this->id,
         ];
     }
 }

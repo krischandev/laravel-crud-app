@@ -24,7 +24,6 @@ class ScheduleProfileController extends Controller
     }
     public function store(SchedProfileSetReq $request)
     {
-        
         ScheduleProfile::create([
             'sp_emp_id'=> $request->sp_emp_id,
             'sp_ss_id'=> $request->sp_ss_id,

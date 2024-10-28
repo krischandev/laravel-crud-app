@@ -32,40 +32,51 @@ setInterval(realTime, 1000)
         @endpush
 
 @section('body')
-<div class="login-box">
-    <div class="login-logo">
-        <div>
-            <p id="clock12"></p>
-          </div>
-    </div>
-    <!-- /.login-logo -->
-    <div class="card">
-      <div class="card-body login-card-body">
-        <p class="login-box-msg">USE YOUR RFID</p>
-  
-        <form action="/" method="post">
-          <div class="input-group mb-3">
-            <input type="text" class="form-control" placeholder="TIME IN / TIME OUT">
-            <div class="input-group-append">
-              <div class="input-group-text">
-                <span class="fas fa-clock"></span>
+<form action="{{ route('scheduleprofile.store') }}" method="POST">
+            <div class="login-box">
+                <div class="login-logo">
+                    <div>
+                        <p id="clock12" style="font-size: 60px;"></p>
+                      </div>
+                </div>
+                <!-- /.login-logo -->
+                <div class="card">
+                  <div class="card-body login-card-body">
+                    <p class="login-box-msg">USE YOUR RFID</p>
+                    <div class="col-lg-12">
+                      <!-- select -->
+                      <div class="form-group">
+                        <select class="form-control">
+                          <option>TIME IN</option>
+                          <option>BREAK OUT</option>
+                          <option>BREAK IN</option>
+                          <option>TIME OUT</option>
+                        </select>
+                      </div>
+                    </div>
+                    <form action="/" method="post">
+                      <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="TIME IN / TIME OUT">
+                        <div class="input-group-append">
+                          <div class="input-group-text">
+                            <span class="fas fa-clock"></span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-12">
+                          <button type="submit" class="btn btn-primary btn-block">LOG</button>
+                        </div>
+                        <!-- /.col -->
+                      </div>
+                    </form>
+              
+                    
+                  </div>
+                  <!-- /.login-card-body -->
+                </div>
               </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-12">
-              <button type="submit" class="btn btn-primary btn-block">TIME IN</button>
-              <button type="submit" class="btn btn-primary btn-block">TIME OUT</button>
-            </div>
-            <!-- /.col -->
-          </div>
-        </form>
-  
-        
-      </div>
-      <!-- /.login-card-body -->
-    </div>
-  </div>
+</form>
 @stop
 
 @section('adminlte_js')

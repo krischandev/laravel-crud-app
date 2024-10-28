@@ -19,7 +19,7 @@
   {{-- Setup data for datatables --}}
 @php
 $heads = [
-    'Emp ID',
+    'Employee',
     'Date',
     'Time IN',
     'Break OUT',
@@ -35,7 +35,7 @@ $heads = [
 if(count($attendancesheet)>0){
     foreach ($attendancesheet as $key => $value) {
         $attendancesheet_data[]= array( //undefined variable
-            $value['atd_emp_id'],
+            $value['atdEmpID']['emp_id']." - ".$value['atdEmpID']['emp_fn']." ".$value['atdEmpID']['emp_mn']." ".$value['atdEmpID']['emp_ln'],
             $value['atd_date'],
             $value['atd_in'],
             $value['atd_break_out'],
@@ -63,7 +63,7 @@ if(count($attendancesheet)>0){
     ];
 
 };
-// dd($config);
+// dd($attendancesheet_data);
 
 @endphp
 

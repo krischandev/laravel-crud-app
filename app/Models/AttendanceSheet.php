@@ -28,4 +28,14 @@ class AttendanceSheet extends Model
     {
         return $this->belongsTo(ScheduleProfile::class,'atd_emp_id');
     }
+
+    public function atdEmpID():BelongsTo
+    {
+        return $this->belongsTo(Employee::class,'atd_emp_id');
+    }
+
+    public function atdEmpMany()
+    {
+        return $this->hasMany(Employee::class,'atd_emp_id');
+    }
 }

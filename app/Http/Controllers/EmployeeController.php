@@ -24,7 +24,7 @@ class EmployeeController extends Controller
      */
     public function create()
     {
-        $position = Position::with('posdept')->get();
+        $position = Position::with('posDept')->get();
         return view('employees.create',compact('position'));
     }
     
@@ -63,9 +63,9 @@ class EmployeeController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Employee $employee,Position $position)
+    public function edit($id)
     {
-        $employees = Employee::with('empPos')->first();
+        $employees = Employee::with('empPos')->find($id);
         $position = Position::with('posEmp')->get();
         return view('employees.edit',compact('employees','position'));
     }

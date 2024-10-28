@@ -358,7 +358,7 @@ return [
                     'icon' => 'fas fa-fw fa-user',
                 ],
                 [
-                    'text' => 'Deparment List',
+                    'text' => 'Department List',
                     'url' => '/department',
                     'icon' => 'fas fa-fw fa-user',
                 ],

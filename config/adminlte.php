@@ -339,10 +339,23 @@ return [
             'icon' => 'fas fa-fw fa-calendar',
         ],
         [
-            'text' => 'Schedule List',
-            'url' => '/schedulesettings',
-            'icon' => 'fas fa-fw fa-book-open',
+            'text' => 'Schedule Management',
+            'icon' => 'fas fa-fw fa-share',
+            'submenu' => [
+                [
+                    'text' => 'Schedule Profile',
+                    'url' => '/scheduleprofile',
+                    'icon' => 'fas fa-fw fa-book-open',
+                ],
+                [
+                    'text' => 'Schedule Settings',
+                    'url' => '/schedulesettings',
+                    'icon' => 'fas fa-fw fa-book-open',
+                ],
+                
+            ]
         ],
+        
         [
             'text' => 'Payroll List',
             'url' => '/payroll-lists',

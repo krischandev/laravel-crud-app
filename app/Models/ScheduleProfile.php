@@ -27,4 +27,11 @@ class ScheduleProfile extends Model
     {
         return $this->belongsTo(ScheduleSettings::class,'sp_ss_id');
     }
+
+    public function schedProfile()
+    {
+        return $this->hasMany(ScheduleSettings::class,'sp_ss_id');
+    }
+
+   
 }

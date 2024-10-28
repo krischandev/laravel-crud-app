@@ -34,7 +34,7 @@
                       <div class="inner">
                       <h3>{{ $attendancesheet->count() }}</h3>
       
-                      <p>Attendance Present</p>
+                      <p>Present Today</p>
                       </div>
                       <div class="icon">
                         <i class="fas fa-calendar-check"></i>
@@ -52,7 +52,7 @@
                       <div class="inner">
                       <h3>{{ $checkAbsence->count() }}</h3>
       
-                      <p>Attendance Absent</p>
+                      <p>Absent Today</p>
                       </div>
                       <div class="icon">
                       <i class="fas fa-calendar-times"></i>

@@ -355,11 +355,27 @@ return [
                 
             ]
         ],
-        
         [
-            'text' => 'Payroll List',
-            'url' => '/payroll-lists',
-            'icon' => 'fas fa-fw fa-money-bill-wave',
+            'text' => 'Payroll Management',
+            'icon' => 'fas fa-fw fa-share',
+            'submenu' => [
+                [
+                    'text' => 'Payroll List',
+                    'url' => '/payrollsheet',
+                    'icon' => 'fas fa-fw fa-money-bill-wave',
+                ],
+                [
+                    'text' => 'Payroll Profile',
+                    'url' => '/payrollprofile',
+                    'icon' => 'fas fa-fw fa-money-bill-wave',
+                ],
+                [
+                    'text' => 'Payroll Deductions',
+                    'url' => '/payrolldeductions',
+                    'icon' => 'fas fa-fw fa-book-open',
+                ],
+                
+            ]
         ],
         [
             'text' => 'Employee Management',

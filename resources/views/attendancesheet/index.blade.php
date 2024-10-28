@@ -35,9 +35,15 @@ $heads = [
 if(count($attendancesheet)>0){
     foreach ($attendancesheet as $key => $value) {
         $attendancesheet_data[]= array( //undefined variable
-            $value['pos_acronym'],
-            $value['pos_title'],
-            $value['posDept']['dept_title'],
+            $value['atd_emp_id'],
+            $value['atd_date'],
+            $value['atd_in'],
+            $value['atd_break_out'],
+            $value['atd_break_in'],
+            $value['atd_out'],
+            $value['atd_ot'],
+            $value['atd_late'],
+            $value['atd_minutes'],
             
             $btnEdit = '<span class="btn-group"><a href="'.route('attendancesheet.edit', $value['id']).'" class="btn btn-success"><i class="fa fa-lg fa-fw fa-pen"></i></a>
             <span class="btn-group">'.
@@ -51,7 +57,7 @@ if(count($attendancesheet)>0){
     };
 
     $config = [
-        'data' =>  $position_data,
+        'data' =>  $attendancesheet_data,
         'order' => [[1, 'asc']],
         'columns' => [null, null, null, ['orderable' => false]],
     ];
@@ -64,7 +70,7 @@ if(count($attendancesheet)>0){
 {{-- Minimal example / fill data using the component slot --}}
 <x-adminlte-datatable id="table8" :heads="$heads" head-theme="dark" class="bg-gray" 
     striped hoverable with-buttons >
-    @if(count($position)>0)
+    @if(count($attendancesheet)>0)
         @foreach($config['data'] as $row)
             <tr>
                 @foreach($row as $cell)

@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\SchedProfileSetReq;
+use App\Models\Employee;
 use App\Models\ScheduleProfile;
+use App\Models\ScheduleSettings;
 use Illuminate\Http\Request;
 
 class ScheduleProfileController extends Controller
@@ -16,8 +18,9 @@ class ScheduleProfileController extends Controller
     }
     public function create()
     {
-        $scheduleprofiles = ScheduleProfile::get();
-        return view('scheduleprofiles.create',compact('scheduleprofiles'));
+        $empProfile = Employee::get();
+        $ssProfile = ScheduleSettings::get();
+        return view('scheduleprofile.create',compact('empProfile','ssProfile'));
     }
     public function store(SchedProfileSetReq $request)
     {

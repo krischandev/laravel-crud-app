@@ -23,7 +23,7 @@ return new class extends Migration
            
 
             $table->bigIncrements('id');
-            $table->string('pos_acronym',255)->unique();
+            $table->string('pos_acronym',255);
             $table->string('pos_title',255);
             $table->unsignedBigInteger('pos_dept_id');
             $table->timestamps();
@@ -36,7 +36,7 @@ return new class extends Migration
 
             $table->bigIncrements('id');
             // $table->string('image')->nullable();
-            $table->string('emp_id')->unique();
+            $table->string('emp_id');
             $table->string('emp_rfid');
             $table->string('emp_fn',255);
             $table->string('emp_mn',255)->nullable();
@@ -73,7 +73,7 @@ return new class extends Migration
            
 
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('sp_emp_id')->unsigned()->unique();
+            $table->unsignedBigInteger('sp_emp_id')->unsigned();
             $table->unsignedBigInteger('sp_ss_id')->unsigned();
             $table->timestamps();
             $table->softDeletes();
@@ -106,7 +106,7 @@ return new class extends Migration
           
 
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('pp_emp_id')->unsigned()->unique();
+            $table->unsignedBigInteger('pp_emp_id')->unsigned();
             $table->float('pp_dailyrate');
             $table->float('pp_allowance');
             $table->timestamps();

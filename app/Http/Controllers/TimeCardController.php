@@ -47,28 +47,31 @@ class TimeCardController extends Controller
                             'atd_late'=> $atd_late,
                         ])->save(); 
                     }
-        }elseif($request->input('optAttendance')=="Break OUT"){
-            $empID = Employee::where('emp_id','=',$request->input('emp_id'))->first();
-            $ID = $empID['id'];
-            $date = Carbon::now()->toDateString();
-            $dateTime = Carbon::now()->toTimeString();
-            $breakOUT = AttendanceSheet::where('atd_date','=',$date)->where('atd_emp_id','=',$ID)->first();
+        }
+        // elseif($request->input('optAttendance')=="Break OUT"){
+        //     $empID = Employee::where('emp_id','=',$request->input('emp_id'))->first();
+        //     $ID = $empID['id'];
+        //     $date = Carbon::now()->toDateString();
+        //     $dateTime = Carbon::now()->toTimeString();
+        //     $breakOUT = AttendanceSheet::where('atd_date','=',$date)->where('atd_emp_id','=',$ID)->first();
                
-            $breakOUT->update([
-                'atd_break_out' => $dateTime,
-             ]);
+        //     $breakOUT->update([
+        //         'atd_break_out' => $dateTime,
+        //      ]);
                 
-        }elseif($request->input('optAttendance')=="Break IN"){
-            $empID = Employee::where('emp_id','=',$request->input('emp_id'))->first();
-            $ID = $empID['id'];
-            $date = Carbon::now()->toDateString();
-            $dateTime = Carbon::now()->toTimeString();
-            $breakIN = AttendanceSheet::where('atd_date','=',$date)->where('atd_emp_id','=',$ID)->first();
+        // }
+        // elseif($request->input('optAttendance')=="Break IN"){
+        //     $empID = Employee::where('emp_id','=',$request->input('emp_id'))->first();
+        //     $ID = $empID['id'];
+        //     $date = Carbon::now()->toDateString();
+        //     $dateTime = Carbon::now()->toTimeString();
+        //     $breakIN = AttendanceSheet::where('atd_date','=',$date)->where('atd_emp_id','=',$ID)->first();
                
-            $breakIN->update([
-                'atd_break_in' => $dateTime,
-             ]);
-        }elseif($request->input('optAttendance')=="Time OUT"){
+        //     $breakIN->update([
+        //         'atd_break_in' => $dateTime,
+        //      ]);
+        // }
+        elseif($request->input('optAttendance')=="Time OUT"){
             $empID = Employee::where('emp_id','=',$request->input('emp_id'))->first();
             $ID = $empID['id'];
             $date = Carbon::now()->toDateString();

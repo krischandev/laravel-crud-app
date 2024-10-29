@@ -22,4 +22,9 @@ class PayrollProfile extends Model
     {
         return $this->belongsTo(Employee::class,'pp_emp_id');
     }
+
+    public function pyrProfileMany()
+    {
+        return $this->hasMany(PayrollSheet::class,'ps_pp_id');
+    }
 }

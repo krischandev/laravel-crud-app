@@ -12,7 +12,7 @@ class PayrollSheetController extends Controller
 {
     public function index()
     {
-        $payrollsheet = PayrollSheet::get();
+        $payrollsheet = PayrollSheet::with('pyrProfile.pyrEmp')->get();
         return view('payrollsheet.index',compact('payrollsheet'));
     }
     public function create()

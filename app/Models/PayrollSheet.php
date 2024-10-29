@@ -4,7 +4,6 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\SoftDeletes;
 class PayrollSheet extends Model
 {
@@ -22,8 +21,10 @@ class PayrollSheet extends Model
 
     ];
 
-    public function pyrProfile():BelongsTo
+    public function pyrProfile()
     {
         return $this->belongsTo(PayrollProfile::class,'ps_pp_id');
     }
+  
+    
 }

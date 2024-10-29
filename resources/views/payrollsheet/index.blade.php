@@ -19,13 +19,13 @@
   {{-- Setup data for datatables --}}
 @php
 $heads = [
-    'ps_pp_id',
-    'ps_date_from',
-    'ps_date_to',
-    'ps_days',
-    'ps_totdeduct',
-    'ps_grosspay',
-    'pas_netincome',
+    'Employee',
+    'Date Coverage From',
+    'Date Coverage To',
+    'Days Present',
+    'Total Deduction',
+    'Grosspay Income',
+    'Net Income',
     ['label' => 'Actions', 'no-export' => true, 'width' => 5],
 ];
 
@@ -33,7 +33,7 @@ $heads = [
 if(count($payrollsheet)>0){
     foreach ($payrollsheet as $key => $value) {
         $payrollsheet_data[]= array( //undefined variable
-            $value['ps_pp_id'],
+            $value['pyrProfile']['pyrEmp']['emp_id']." - ".$value['pyrProfile']['pyrEmp']['emp_fn']." ".$value['pyrProfile']['pyrEmp']['emp_mn']." ".$value['pyrProfile']['pyrEmp']['emp_ln'],
             $value['ps_date_from'],
             $value['ps_date_to'],
             $value['ps_days'],
@@ -59,7 +59,7 @@ if(count($payrollsheet)>0){
     ];
 
 };
-// dd($payrollprofile);
+// dd($payrollsheet);
 
 @endphp
 

@@ -17,22 +17,22 @@
         <div class="row">
             <div class="col-3">
                 <label>SSS in Percentage</label>
-                <input type="text" class="form-control" name="pd_sss" placeholder="SSS" value="{{ $payrollprofile->pd_sss }}">
+                <input type="text" class="form-control" name="pd_sss" placeholder="SSS" value="{{ $payrolldeduction->pd_sss }}">
                 @error('pd_sss')<span class="text-danger">{{ $message }}</span>@enderror
             </div>
             <div class="col-3">
                 <label>PAGIBIG</label>
-                <input type="text" class="form-control" name="pd_pagibig" placeholder="PAGIBIG" value="{{ $payrollprofile->pd_pagibig }}">
+                <input type="text" class="form-control" name="pd_pagibig" placeholder="PAGIBIG" value="{{ $payrolldeduction->pd_pagibig }}">
                 @error('pd_pagibig')<span class="text-danger">{{ $message }}</span>@enderror
             </div>
             <div class="col-3">
                 <label>PHILHEALTH</label>
-                <input type="text" class="form-control" name="pd_philhealth" placeholder="PHILHEALTH" value="{{ $payrollprofile->pd_philhealth }}">
+                <input type="text" class="form-control" name="pd_philhealth" placeholder="PHILHEALTH" value="{{ $payrolldeduction->pd_philhealth }}">
                 @error('pd_philhealth')<span class="text-danger">{{ $message }}</span>@enderror
             </div>
             <div class="col-3">
                 <label>OTHERS</label>
-                <input type="text" class="form-control" name="pd_others" placeholder="OTHERS" value="{{ $payrollprofile->pd_others }}">
+                <input type="text" class="form-control" name="pd_others" placeholder="OTHERS" value="{{ $payrolldeduction->pd_others }}">
                 @error('pd_others')<span class="text-danger">{{ $message }}</span>@enderror
             </div>
             

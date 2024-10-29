@@ -27,6 +27,7 @@ class PayrollSheetController extends Controller
         $payProfile = PayrollProfile::with('pyrEmp')->find($request->ps_pp_id);
         $payEmp = $payProfile['pyrEmp']['id'];
         $dailyrate = $payProfile['pp_dailyrate'];
+        $allowance = $payProfile['pp_allowance'];
 
         $attendancesheet = AttendanceSheet::whereBetween('atd_date', [$from, $to])->where('atd_emp_id','=',$payEmp)->get();
         $ps_days =count($attendancesheet);
@@ -34,7 +35,7 @@ class PayrollSheetController extends Controller
         $pyDeduct = PayrollDeductions::get()->first();
         $totdeduct = (($dailyrate*13)*($pyDeduct['pd_sss']/100))+$pyDeduct['pd_pagibig']+$pyDeduct['pd_philhealth']+$pyDeduct['pd_others'];
         
-        $ps_grosspay = $dailyrate*$ps_days;
+        $ps_grosspay = ($dailyrate*$ps_days)+$allowance;
         $ps_netincome = $ps_grosspay-$totdeduct;
         
         // dd($attendancesheet);

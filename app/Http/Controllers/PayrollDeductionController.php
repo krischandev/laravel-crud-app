@@ -31,9 +31,9 @@ class PayrollDeductionController extends Controller
 
     public function edit($id)
     {
-        // $position = Position::with('posDept')->find($id);
+        $payrolldeduction = PayrollDeductions::find($id);
         // $department = Department::get();
-        return view('payrolldeduction.edit');
+        return view('payrolldeduction.edit',compact('payrolldeduction'));
     }
 
     public function update(Request $request, PayrollDeductions $payrolldeduction)
@@ -41,8 +41,10 @@ class PayrollDeductionController extends Controller
 // dd($position);
 
         $payrolldeduction->update([
-            // 'pos_title'=> $request->pos_title,
-            // 'pos_dept_id'=> $request->pos_dept_id,
+            'pd_sss'=> $request->pd_sss,
+            'pd_pagibig'=> $request->pd_pagibig,
+            'pd_philhealth'=> $request->pd_philhealth,
+            'pd_others'=> $request->pd_others,
         ]);
 
         return redirect('/payrolldeduction')->with('status','Payroll Deduction Updated Successfully');

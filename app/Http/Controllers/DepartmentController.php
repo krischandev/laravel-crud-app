@@ -26,9 +26,25 @@ class DepartmentController extends Controller
 
         return redirect('/department')->with('status','Department Created Successfully');
     }
+    public function edit($id)
+    {
+        $department = Department::find($id);
+        return view('department.edit',compact('department'));
+    }
+
+    public function update(DeptReq $request, Department $department)
+    {
+// dd($position);
+
+        $department->update([
+            'dept_title'=> $request->dept_title,
+        ]);
+
+        return redirect('/department')->with('status','Department Updated Successfully');
+    }
     public function destroy($id)
     {
         $id = Department::find($id)->delete();
-       return redirect('/department')->with('status','Employee Deleted Successfully');
+       return redirect('/department')->with('status','Department Deleted Successfully');
     }
 }

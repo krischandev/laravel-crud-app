@@ -50,28 +50,33 @@ class AttendanceSheetController extends Controller
 
     public function edit($id)
     {
-        // $position = Position::with('posDept')->find($id);
-        // $department = Department::get();
-        return view('attendancesheet.edit',compact('position','department'));
+        
+        $attendancesheet = AttendanceSheet::with('atdEmp','atdEmpID')->find($id);
+        return view('attendancesheet.edit',compact('attendancesheet'));
     }
 
     public function update(Request $request, AttendanceSheet $attendancesheet)
     {
-// dd($position);
+// dd($request->atd_emp_id);
+$ss_time_from = ScheduleProfile::with('schedEmp','schedSet')->find($request->atd_emp_id);
+$ss_time_from = $ss_time_from['schedSet']['ss_time_from'];
+// dd($ss_time_from);
+$atd_late = Carbon::parse($ss_time_from)->diffInMinutes(Carbon::parse($request->input('atd_in')));//you also find difference in hours using diffInHours()
+$atd_minutes = Carbon::parse($request->input('atd_in'))->diffInMinutes(Carbon::parse($request->input('atd_out')));//you also find difference in hours using diffInHours()
+
 
         $attendancesheet->update([
-           'atd_emp_id' => $request->atd_emp_id,
             'atd_date' => $request->atd_date,
             'atd_in' => $request->atd_in,
             'atd_break_out' => $request->atd_break_out,
             'atd_break_in' => $request->atd_break_in,
             'atd_out' => $request->atd_out,
             'atd_ot'=> $request->atd_ot,
-            'atd_late'=> $request->atd_late,
-            'atd_minutes'=> $request->atd_minutes,
+            'atd_late'=> $atd_late,
+            'atd_minutes'=> $atd_minutes,
         ]);
 
-        return redirect('/attendancesheet')->with('status','Position Updated Successfully');
+        return redirect('/attendancesheet')->with('status','Attendance Updated Successfully');
     }
     public function destroy($id)
     {

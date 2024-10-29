@@ -37,9 +37,9 @@ if(count($payrollsheet)>0){
             $value['ps_date_from'],
             $value['ps_date_to'],
             $value['ps_days'],
-            $value['ps_totdeduct'],
-            $value['ps_grosspay'],
-            $value['ps_netincome'],
+            number_format($value['ps_totdeduct'],2)." PHP",
+            number_format($value['ps_grosspay'],2)." PHP",
+            number_format($value['ps_netincome'],2)." PHP",
             
             $btnEdit = '<span class="btn-group"><a href="'.route('payrollsheet.edit', $value['id']).'" class="btn btn-success"><i class="fa fa-lg fa-fw fa-pen"></i></a>
             <span class="btn-group">'.

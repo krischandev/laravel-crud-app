@@ -43,7 +43,7 @@ setInterval(realTime, 1000)
                       @php
                       $currentDate = date('l, F j, Y'); echo $currentDate;
                       @endphp
-                        <p id="clock12" style="font-size: 60px;"></p>
+                        <p id="clock12" style="font-size: 45px;"></p>
                         
                       </div>
                 </div>

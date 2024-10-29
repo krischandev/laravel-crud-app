@@ -43,12 +43,9 @@ if(count($payrollsheet)>0){
             
             $btnEdit = '<span class="btn-group"><a href="'.route('payrollsheet.edit', $value['id']).'" class="btn btn-success"><i class="fa fa-lg fa-fw fa-pen"></i></a>
             <span class="btn-group">'.
-            $btnDelete = '<a href="'.route('payrollsheet.destroy', $value['id']).'" class="btn btn-danger"><i class="fa fa-lg fa-fw fa-trash"></i></a></span>',
-            // $btnDetails = '<button class="btn btn-xs btn-default text-teal mx-1 shadow" title="Details">
-            //                 <i class="fa fa-lg fa-fw fa-eye"></i>
-            //             </button> ',
+            $btnDelete = '<a href="'.route('payrollsheet.destroy', $value['id']).'" class="btn btn-danger"><i class="fa fa-lg fa-fw fa-trash"></i></a></span>'.
+            $btnDetails = '<a href="'.route('payrollsheet.show', $value['id']).'" class="btn btn-info"><i class="fa fa-lg fa-fw fa-eye"></i></i></a></span>',
         );
-        
         // echo $employee_name;
     };
 

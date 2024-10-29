@@ -16,6 +16,12 @@ class PayrollSheetController extends Controller
         $payrollsheet = PayrollSheet::with('pyrProfile.pyrEmp')->get();
         return view('payrollsheet.index',compact('payrollsheet'));
     }
+    public function show($id)
+    {
+        $payrollsheet = PayrollSheet::with('pyrProfile.pyrEmp.empPos')->find($id);
+        $pyDeduct = PayrollDeductions::get()->first();
+        return view('payrollsheet.show',compact('payrollsheet','pyDeduct'));
+    }
     public function create()
     {
         $payProfile = PayrollProfile::with('pyrEmp')->get();
@@ -92,9 +98,9 @@ class PayrollSheetController extends Controller
 
         return redirect('/payrollsheet')->with('status','Payroll Sheet Updated Successfully');
     }
-//     public function destroy($id)
-//     {
-//         $id = PayrollProfile::find($id)->delete();
-//        return redirect('/payrollprofile')->with('status','Employee Deleted Successfully');
-//     }
+    public function destroy($id)
+    {
+        $id = PayrollSheet::find($id)->delete();
+       return redirect('/payrollsheet')->with('status','Payroll Sheet Deleted Successfully');
+    }
 }

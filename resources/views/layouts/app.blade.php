@@ -47,7 +47,7 @@
     </div>
 
     <strong>
-        Attendance and Payroll Management System - Laravel APP
+        Peak - Attendance and Payroll Management System
     </strong>
 @stop
 {{-- Add common Javascript/Jquery code --}}

@@ -6,10 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\SoftDeletes;
-class PayrollSlip extends Model
+class PayrollSheet extends Model
 {
     use HasFactory, SoftDeletes;
-    protected $table = "payroll_slip";
+    protected $table = "payroll_sheet";
 
     protected $fillable = [
     'ps_pp_id',
@@ -18,7 +18,7 @@ class PayrollSlip extends Model
     'ps_days',
     'ps_totdeduct',
     'ps_grosspay',
-    'pas_netincome',
+    'ps_netincome',
 
     ];
 

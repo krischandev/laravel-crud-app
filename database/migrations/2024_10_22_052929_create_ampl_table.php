@@ -115,7 +115,7 @@ return new class extends Migration
             
         });
 
-        Schema::create('payroll_slip', function (Blueprint $table) {
+        Schema::create('payroll_sheet', function (Blueprint $table) {
            
 
             $table->bigIncrements('id');
@@ -125,7 +125,7 @@ return new class extends Migration
             $table->integer('ps_days');
             $table->float('ps_totdeduct');
             $table->float('ps_grosspay');
-            $table->float('pas_netincome');
+            $table->float('ps_netincome');
             $table->timestamps();
             $table->softDeletes();
 

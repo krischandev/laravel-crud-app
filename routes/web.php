@@ -8,6 +8,7 @@ use App\Http\Controllers\PositionController;
 use App\Http\Controllers\DepartmentController;
 use App\Http\Controllers\PayrollDeductionController;
 use App\Http\Controllers\PayrollProfileController;
+use App\Http\Controllers\PayrollSheetController;
 use App\Http\Controllers\PayrollSlipController;
 use App\Http\Controllers\ScheduleProfileController;
 use App\Http\Controllers\ScheduleSettingsController;
@@ -48,7 +49,7 @@ Route::group(['middleware'=>['auth']], function(){
     // Payroll
     Route::resource('payrollprofile',PayrollProfileController::class);
     Route::resource('payrolldeduction',PayrollDeductionController::class);
-    Route::resource('payrollslip',PayrollSlipController::class);
+    Route::resource('payrollsheet',PayrollSheetController::class);
 
     // Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 

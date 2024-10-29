@@ -49,4 +49,9 @@ class ScheduleProfileController extends Controller
         ]);
         return redirect('/scheduleprofile')->with('status','Schedule Assigned Updated Successfully');
     }
+    public function destroy($id)
+    {
+        $id = ScheduleProfile::find($id)->delete();
+       return redirect('/scheduleprofile')->with('status','Employee Deleted Successfully');
+    }
 }

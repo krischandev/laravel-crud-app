@@ -51,4 +51,9 @@ class ScheduleSettingsController extends Controller
         ]);
         return redirect('/schedulesettings')->with('status','Schedule Updated Successfully');
     }
+    public function destroy($id)
+    {
+        $id = ScheduleSettings::find($id)->delete();
+       return redirect('/schedulesettings')->with('status','Employee Deleted Successfully');
+    }
 }

@@ -26,4 +26,9 @@ class DepartmentController extends Controller
 
         return redirect('/department')->with('status','Department Created Successfully');
     }
+    public function destroy($id)
+    {
+        $id = Department::find($id)->delete();
+       return redirect('/department')->with('status','Employee Deleted Successfully');
+    }
 }

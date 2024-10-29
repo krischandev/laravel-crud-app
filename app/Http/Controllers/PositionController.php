@@ -50,4 +50,9 @@ class PositionController extends Controller
 
         return redirect('/position')->with('status','Position Updated Successfully');
     }
+    public function destroy($id)
+    {
+        $id = Position::find($id)->delete();
+       return redirect('/position')->with('status','Employee Deleted Successfully');
+    }
 }

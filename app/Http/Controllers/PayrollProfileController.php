@@ -50,4 +50,9 @@ class PayrollProfileController extends Controller
 
         return redirect('/payrollprofile')->with('status','Payroll Profile Updated Successfully');
     }
+    public function destroy($id)
+    {
+        $id = PayrollProfile::find($id)->delete();
+       return redirect('/payrollprofile')->with('status','Employee Deleted Successfully');
+    }
 }

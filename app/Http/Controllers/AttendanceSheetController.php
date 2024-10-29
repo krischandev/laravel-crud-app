@@ -52,7 +52,7 @@ class AttendanceSheetController extends Controller
     {
         // $position = Position::with('posDept')->find($id);
         // $department = Department::get();
-        return view('position.edit',compact('position','department'));
+        return view('attendancesheet.edit',compact('position','department'));
     }
 
     public function update(Request $request, AttendanceSheet $attendancesheet)
@@ -71,6 +71,11 @@ class AttendanceSheetController extends Controller
             'atd_minutes'=> $request->atd_minutes,
         ]);
 
-        return redirect('/position')->with('status','Position Updated Successfully');
+        return redirect('/attendancesheet')->with('status','Position Updated Successfully');
+    }
+    public function destroy($id)
+    {
+        $id = AttendanceSheet::find($id)->delete();
+       return redirect('/employees')->with('status','Employee Deleted Successfully');
     }
 }

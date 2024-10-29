@@ -47,4 +47,9 @@ class PayrollDeductionController extends Controller
 
         return redirect('/payrolldeduction')->with('status','Payroll Deduction Updated Successfully');
     }
+    public function destroy($id)
+    {
+        $id = PayrollDeductions::find($id)->delete();
+       return redirect('/payrolldeduction')->with('status','Employee Deleted Successfully');
+    }
 }

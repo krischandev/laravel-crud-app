@@ -33,8 +33,9 @@ class TimeCardController extends Controller
                         $date = Carbon::now()->toDateString();
                     $dateTime = Carbon::now()->toTimeString();
                         $ss_time_from = ScheduleProfile::with('schedEmp','schedSet')->find($ID);
-                        $ss_time_from = $ss_time_from['schedSet']['ss_time_from'];
                 // dd($ss_time_from);
+
+                        $ss_time_from = $ss_time_from['schedSet']['ss_time_from'];
                         $atd_late = Carbon::parse($ss_time_from)->diffInMinutes(Carbon::parse($request->input('atd_in')));//you also find difference in hours using diffInHours()
                     
                     if(AttendanceSheet::where('atd_emp_id', $ID)->where('atd_date','=',$date)->exists()){
@@ -48,29 +49,6 @@ class TimeCardController extends Controller
                         ])->save(); 
                     }
         }
-        // elseif($request->input('optAttendance')=="Break OUT"){
-        //     $empID = Employee::where('emp_id','=',$request->input('emp_id'))->first();
-        //     $ID = $empID['id'];
-        //     $date = Carbon::now()->toDateString();
-        //     $dateTime = Carbon::now()->toTimeString();
-        //     $breakOUT = AttendanceSheet::where('atd_date','=',$date)->where('atd_emp_id','=',$ID)->first();
-               
-        //     $breakOUT->update([
-        //         'atd_break_out' => $dateTime,
-        //      ]);
-                
-        // }
-        // elseif($request->input('optAttendance')=="Break IN"){
-        //     $empID = Employee::where('emp_id','=',$request->input('emp_id'))->first();
-        //     $ID = $empID['id'];
-        //     $date = Carbon::now()->toDateString();
-        //     $dateTime = Carbon::now()->toTimeString();
-        //     $breakIN = AttendanceSheet::where('atd_date','=',$date)->where('atd_emp_id','=',$ID)->first();
-               
-        //     $breakIN->update([
-        //         'atd_break_in' => $dateTime,
-        //      ]);
-        // }
         elseif($request->input('optAttendance')=="Time OUT"){
             $empID = Employee::where('emp_id','=',$request->input('emp_id'))->first();
             $ID = $empID['id'];

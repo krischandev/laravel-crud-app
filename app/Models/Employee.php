@@ -45,4 +45,6 @@ class Employee extends Model
         return $this->hasMany(AttendanceSheet::class,'atd_emp_id');
     }
 
+   
+
 }

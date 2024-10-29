@@ -12,13 +12,14 @@ use App\Http\Controllers\PayrollSheetController;
 use App\Http\Controllers\PayrollSlipController;
 use App\Http\Controllers\ScheduleProfileController;
 use App\Http\Controllers\ScheduleSettingsController;
+use App\Http\Controllers\TimeCardController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
-// Route::resource('timecard', TimeCardController::class);
-Route::get('/timecard', function () {
-    return view('timecard.index');
-})->name('timecard');
+Route::resource('timecard', TimeCardController::class);
+// Route::get('/timecard', function () {
+//     return view('timecard.index');
+// })->name('timecard');
 
 Auth::routes();
 

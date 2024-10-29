@@ -83,4 +83,5 @@ $atd_minutes = Carbon::parse($request->input('atd_in'))->diffInMinutes(Carbon::p
         $id = AttendanceSheet::find($id)->delete();
        return redirect('/employees')->with('status','Employee Deleted Successfully');
     }
+
 }

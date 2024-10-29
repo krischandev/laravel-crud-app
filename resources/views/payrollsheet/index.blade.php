@@ -36,7 +36,7 @@ if(count($payrollsheet)>0){
             $value['pyrProfile']['pyrEmp']['emp_id']." - ".$value['pyrProfile']['pyrEmp']['emp_fn']." ".$value['pyrProfile']['pyrEmp']['emp_mn']." ".$value['pyrProfile']['pyrEmp']['emp_ln'],
             $value['ps_date_from'],
             $value['ps_date_to'],
-            $value['ps_days'],
+            $value['ps_days']." Days",
             number_format($value['ps_totdeduct'],2)." PHP",
             number_format($value['ps_grosspay'],2)." PHP",
             number_format($value['ps_netincome'],2)." PHP",

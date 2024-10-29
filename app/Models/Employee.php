@@ -13,7 +13,6 @@ class Employee extends Model
 
     protected $fillable = [
     'emp_id',
-    'emp_rfid',
     'emp_fn',
     'emp_mn',
     'emp_ln',

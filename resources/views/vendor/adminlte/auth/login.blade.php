@@ -103,10 +103,10 @@
     @endif
 
 
-    <br><br>
+    {{-- <br><br>
         <p class="my-0">
             <a href="/timecard">
                 TIME IN AND TIME OUT
             </a>
-        </p>
+        </p> --}}
 @stop

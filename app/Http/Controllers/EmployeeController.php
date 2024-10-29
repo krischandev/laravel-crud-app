@@ -37,7 +37,6 @@ class EmployeeController extends Controller
 // dd($posId,$posAcro);
         Employee::create([
             'emp_id'=> Str::charAt($request->emp_fn,0)."".Str::charAt($request->emp_mn,0)."".Str::charAt($request->emp_ln,0)."".$dateYear."".$genId."".$posAcro,
-            'emp_rfid'=> $request->emp_rfid,
             'emp_fn'=> $request->emp_fn,
             'emp_mn'=> $request->emp_mn,
             'emp_ln'=> $request->emp_ln,
@@ -82,7 +81,6 @@ class EmployeeController extends Controller
 
         $employee->update([
             'emp_id'=> Str::charAt($request->emp_fn,0)."".Str::charAt($request->emp_mn,0)."".Str::charAt($request->emp_ln,0)."".$dateYear."".$genId."".$posAcro,
-            'emp_rfid'=> $request->emp_rfid,
             'emp_fn'=> $request->emp_fn,
             'emp_mn'=> $request->emp_mn,
             'emp_ln'=> $request->emp_ln,

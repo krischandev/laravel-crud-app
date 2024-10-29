@@ -19,11 +19,6 @@
         <div class="form-group">
             <div class="row">
                 <div class="col-4">
-                    <label>Employee RFID</label>
-                    <input type="text" class="form-control" name="emp_rfid" placeholder="RFID NUMBER">
-                    @error('emp_rfid')<span class="text-danger">{{ $message }}</span>@enderror
-                </div>
-                <div class="col-4">
                     <label>Position</label>
                     <x-adminlte-select name="emp_pos_id">
                         <option class="d-none" value="">Select Position ...</option>

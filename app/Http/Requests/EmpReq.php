@@ -22,7 +22,6 @@ class EmpReq extends FormRequest
     public function rules(): array
     {
         return[
-            'emp_rfid'=> 'sometimes|required|unique:employees,id,'.$this->id,
             'emp_fn'=> 'required|string|min:2|max:255',
             'emp_ln'=> 'required|string|min:2|max:255',
             'emp_pos_id'=> 'required',

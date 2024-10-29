@@ -37,7 +37,6 @@ return new class extends Migration
             $table->bigIncrements('id');
             // $table->string('image')->nullable();
             $table->string('emp_id');
-            $table->string('emp_rfid');
             $table->string('emp_fn',255);
             $table->string('emp_mn',255)->nullable();
             $table->string('emp_ln',255);

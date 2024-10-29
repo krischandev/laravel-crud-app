@@ -33,9 +33,10 @@ class PayrollProfileController extends Controller
 
     public function edit($id)
     {
-        // $position = Position::with('posDept')->find($id);
-        // $department = Department::get();
-        return view('payrollprofile.edit',compact('payrollprofile','payrollprofile'));
+        $payrollprofile = PayrollProfile::with('pyrEmp')->find($id);
+        $employee = Employee::get();
+        // dd($employee);
+        return view('payrollprofile.edit',compact('payrollprofile','employee'));
     }
 
     public function update(PayrolLProReq $request, PayrollProfile $payrollprofile)
@@ -43,8 +44,8 @@ class PayrollProfileController extends Controller
 // dd($position);
 
         $payrollprofile->update([
-            // 'pos_title'=> $request->pos_title,
-            // 'pos_dept_id'=> $request->pos_dept_id,
+           'pp_dailyrate'=> $request->pp_dailyrate,
+            'pp_allowance'=> $request->pp_allowance,
         ]);
 
         return redirect('/payrollprofile')->with('status','Payroll Profile Updated Successfully');

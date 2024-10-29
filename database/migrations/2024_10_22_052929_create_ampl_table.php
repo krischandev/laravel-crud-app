@@ -138,7 +138,7 @@ return new class extends Migration
            
 
             $table->bigIncrements('id');
-            $table->integer('pd_sss');
+            $table->float('pd_sss');
             $table->integer('pd_pagibig');
             $table->integer('pd_philhealth');
             $table->integer('pd_others');

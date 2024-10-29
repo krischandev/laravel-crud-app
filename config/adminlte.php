@@ -371,7 +371,7 @@ return [
                 ],
                 [
                     'text' => 'Payroll Deductions',
-                    'url' => '/payrolldeductions',
+                    'url' => '/payrolldeduction',
                     'icon' => 'fas fa-fw fa-book-open',
                 ],
                 

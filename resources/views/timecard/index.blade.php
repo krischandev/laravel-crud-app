@@ -40,9 +40,11 @@ setInterval(realTime, 1000)
                   <img src="{{ asset(config('adminlte.logo_img')) }}"
                          alt="{{ config('adminlte.logo_img_alt') }}" height="100">
                     <div>
+                      <p class="login-box-msg" style="font-size: 25px">
                       @php
-                      $currentDate = date('l, F j, Y'); echo $currentDate;
+                        $currentDate = date('F j, Y - l'); echo $currentDate;
                       @endphp
+                      </p>
                         <p id="clock12" style="font-size: 45px;"></p>
                         
                       </div>
@@ -56,8 +58,8 @@ setInterval(realTime, 1000)
                       <div class="form-group">
                         <select class="form-control" name="optAttendance">
                             <option value="Time IN">TIME IN</option>
-                            <option value="Break OUT">BREAK OUT</option>
-                            <option value="Break IN">BREAK IN</option>
+                            {{-- <option value="Break OUT">BREAK OUT</option>
+                            <option value="Break IN">BREAK IN</option> --}}
                             <option value="Time OUT">TIME OUT</option>
                         </select>
                       </div>

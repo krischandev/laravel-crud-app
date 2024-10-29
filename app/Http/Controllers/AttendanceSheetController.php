@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\AttendanceSheet;
-use App\Models\Employee;
 use App\Models\ScheduleProfile;
 
 use Illuminate\Http\Request;
@@ -36,8 +35,8 @@ class AttendanceSheetController extends Controller
             'atd_emp_id' => $request->atd_emp_id,
             'atd_date' => $request->atd_date,
             'atd_in' => $request->atd_in,
-            'atd_break_out' => $request->atd_break_out,
-            'atd_break_in' => $request->atd_break_in,
+            // 'atd_break_out' => $request->atd_break_out,
+            // 'atd_break_in' => $request->atd_break_in,
             'atd_out' => $request->atd_out,
             'atd_ot'=> $request->atd_ot,
             'atd_late'=> $atd_late,
@@ -68,8 +67,8 @@ $atd_minutes = Carbon::parse($request->input('atd_in'))->diffInMinutes(Carbon::p
         $attendancesheet->update([
             'atd_date' => $request->atd_date,
             'atd_in' => $request->atd_in,
-            'atd_break_out' => $request->atd_break_out,
-            'atd_break_in' => $request->atd_break_in,
+            // 'atd_break_out' => $request->atd_break_out,
+            // 'atd_break_in' => $request->atd_break_in,
             'atd_out' => $request->atd_out,
             'atd_ot'=> $request->atd_ot,
             'atd_late'=> $atd_late,

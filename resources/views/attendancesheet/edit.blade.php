@@ -22,7 +22,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-4">
+            <div class="col-3">
                 @php
                 $config = [
                     'format' => 'YYYY-MM-DD',
@@ -38,7 +38,7 @@
                     </x-slot>
                 </x-adminlte-input-date>
             </div>
-            <div class="col-4">
+            <div class="col-3">
                 @php
                 $config = [
                     'format' => 'HH:mm:ss',
@@ -54,7 +54,7 @@
                     </x-slot>
                 </x-adminlte-input-date>
             </div>
-            <div class="col-4">
+            <div class="col-3">
                 @php
                 $config = [
                     'format' => 'HH:mm:ss',
@@ -71,7 +71,7 @@
                 </x-adminlte-input-date>
             </div>
 
-            <div class="col-4">
+            <div class="col-3">
                 <label>Overtime *in Minutes</label>
                 <input type="text" class="form-control" name="atd_ot" placeholder="OT" value="{{ $attendancesheet->atd_ot }}">
                 @error('atd_ot')<span class="text-danger">{{ $message }}</span>@enderror
@@ -81,7 +81,7 @@
                 <input type="text" class="form-control" name="atd_late" placeholder="LATE">
                 @error('atd_late')<span class="text-danger">{{ $message }}</span>@enderror
             </div> --}}
-            <div class="col-4">
+            {{-- <div class="col-4">
                 @php
                 $config = [
                     'format' => 'HH:mm:ss',
@@ -113,7 +113,7 @@
                     </x-slot>
                 </x-adminlte-input-date>
             </div>
-            
+             --}}
         </div>
     </div>
         

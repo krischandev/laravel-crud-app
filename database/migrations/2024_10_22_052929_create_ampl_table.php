@@ -88,8 +88,8 @@ return new class extends Migration
             $table->unsignedBigInteger('atd_emp_id')->unsigned();
             $table->date('atd_date');
             $table->time('atd_in');
-            $table->time('atd_break_out');
-            $table->time('atd_break_in');
+            // $table->time('atd_break_out');
+            // $table->time('atd_break_in');
             $table->time('atd_out');
             $table->integer('atd_ot');
             $table->integer('atd_late');

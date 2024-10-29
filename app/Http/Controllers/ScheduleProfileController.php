@@ -45,7 +45,6 @@ class ScheduleProfileController extends Controller
 // dd($schedulesetting);
         
         $scheduleprofile->update([
-           'sp_emp_id'=> $request->sp_emp_id,
             'sp_ss_id'=> $request->sp_ss_id,
         ]);
         return redirect('/scheduleprofile')->with('status','Schedule Assigned Updated Successfully');

@@ -6,7 +6,7 @@
 @section('card_header')
     <h3>Update Details</h3>
     <a href="{{ route('scheduleprofile.index') }}" class="btn btn-danger">Back</a>
-    {{-- @dd($scheduleSettingsAll); --}}
+    {{-- @dd($employee); --}}
 @endsection
 @section('card_body')
 <form action="{{ route('scheduleprofile.update', $scheduleprofile->id) }}" method="POST">
